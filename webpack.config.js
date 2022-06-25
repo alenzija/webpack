@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const WebpackBundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -59,6 +60,7 @@ const pluginsSet = () => {
       ],
     }),
     new MiniCssExtractPlugin({filename: filename('css')}),
+    new ESLintPlugin(),
   ];
   if (isProd) plugins.push(new WebpackBundleAnalyzerPlugin());
   return plugins;

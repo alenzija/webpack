@@ -1,14 +1,16 @@
+//const str = 'str';
+
 export default class Post {
   constructor(title, img) {
-    this.title = title;
     this.date = new Date();
     this.img = img;
+    this.title = title;
   }
   toString() {
     return JSON.stringify({
-      title: this.title,
       date: this.date.toJSON(),
       img: this.img,
+      title: this.title,
     });
   }
 }

@@ -1,5 +1,5 @@
-/*{
-  "parser": "babel-eslint",
+{
+  "parser": "@babel/eslint-parser",
   "rules": {
     "no-unused-vars": "warn",
     "sort-keys": "warn"
@@ -10,4 +10,3 @@
   },
   "extends": ["eslint:recommended"]
 }
-*/
